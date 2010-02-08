@@ -8,4 +8,4 @@ import StdEnv
 //3. feladat 3-as modulo osztalyok leeneralasa 100-ig
 //Start = [0,3..100] 
 //Start = [1,4..100] 
-Start = [5,8..100]
+//Start = [2,5..100]
