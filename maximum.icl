@@ -1,12 +1,12 @@
-module maximum
-import StdEnv
+module maximum //fajl neve
+import StdEnv 
 
 
 
  
-Start = max3 5 -1 3      // => 5
+Start = max3 5 -1 3      // => 5 
 //fv-t kiertekeljuk, 3 parameterrel
-
+// egy start van!
 // kivalasztja a maximumot 3 szambol
 max3 a b c
     | a>=b && a>=c    = a
