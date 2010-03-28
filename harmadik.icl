@@ -34,13 +34,21 @@ max2 a b c | a>max1 b c =a
 			=max1 b c
 			
 			
-Start = 
+//Start = sort2 1 2// 3
 
-sort a c b 	|a>b
-				|b>c	= (a,b,c)
-				|c>b
-					|c>a	= (c,a,b)
-					
+sort3 a b c
+    | a<b
+        | b<c       = (a,b,c)
+        | a<c       = (a,c,b)
+        | otherwise = (c,a,b)
+    | c<b           = (c,b,a)
+    | a<c           = (b,a,c)
+                    = (b,c,a)
+sort2 a b
+	| a<b	= (a,b)
+			= (b,a) 
+//sort3` a b c
+	
 					
 					
 //a^2+b^2+c^2=d^2 a<b<c<d 10 db
@@ -48,6 +56,14 @@ sort a c b 	|a>b
 //pirospontos
 
 //prim szamok 10 db tobbszorozve 1 lista
+
+
+
+
+
+
+
+
 
 
 				
