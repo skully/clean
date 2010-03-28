@@ -11,7 +11,9 @@ import StdEnv
 
 //3)
 
-Start = repeatprimes (primes 10)
-repeatprimes s = [y \\ y<-(s), x<-[1..y]]
-primes x = take x	[ x \\ x<-[1..] | isprime x ]
-isprime x = (length [ n \\ n<-[1..x]| x rem n == 0 ]) <= 2
+Start = repeatitemtimes (primes 10)
+repeatitemtimes s = [y \\ y<-(s), x<-[1..y]] 				//annyiszor ismetel elemeket 
+															//adott sorozatbol, 
+															//amennyi az adott elem erteke
+primes x = take x	[ x \\ x<-[1..] | isprime x ] 			//elso x db prim
+isprime x = (length [ n \\ n<-[1..x]| x rem n == 0 ]) <= 2 	//egy adott szam prim-e
