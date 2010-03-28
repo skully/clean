@@ -4,33 +4,27 @@ import StdEnv
 
 
 //1)
-///szaaaaaaaaaaaaaaaaaaaaaaaaaaaar
 
-Start= map`` [n,z] [2]
+/*
+Start = compose` [n,z] [3,5]   
+
 n x = x^2
 z x = x+1
- 
-//fz [e:k] = 
 
-//Start = map` (\x=x*x*x) [1..10]
-// [1,4,9,16,25]
-// ugyanaz, mint [ x*x*x \\ x<-[1..10]]
+compose` [] [] = []
+compose` [] l = l
+compose` l [] = []
+compose` l k = [ x y \\ x<-(compose l), y<-k  ] 
 
-map` f [] = []
-map` f [h:t] = [f h:map` f t]
 
-map`` f [] = []
-map`` [] [] = []
-map`` [] f = []
-map`` [h:t] f = [map` h f : map`` t f] 
-///eddig szaaaaaaaaaaar, estere ki lesz javitva, remelem!
-
+compose [] = []
+compose [a, b : t] = [a o b : t ] */
 
 
 //2)
 //kicsit altalanositani nem artana!
-//Start = [f [1..10],g [1..10], h [1..10]]
-/*f []=[]
+/*Start = [f [1..10],g [1..10], h [1..10]]
+f []=[]
 f l = take 1 l ++ f(drop 3 l)
 g []=[]
 g l = drop 1 ( take 2 l) ++ g (drop 3 l)
